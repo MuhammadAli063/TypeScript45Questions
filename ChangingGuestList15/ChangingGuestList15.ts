@@ -18,5 +18,35 @@ for (let j = 0; j < guest_List.length; j++) {
     console.log(`Dear ${guest_List[k]} you are invited to dinner. Join me for a wonderful evening!`)
  }
 
+//  Question No:# 16  =>   More Guests
+//  Bigger Dinner Table 
+console.log(`Hi Guys! I am infoeming you I found a Bigger Dinner table for you`);
+
+
+// Add new guest beginning of array 
+let newGuest:string = 'Shahid';
+guest_List.unshift(newGuest);
+console.log("Add new guest beginning of array : " + guest_List);
+
+// Add one new guest to the middle of your array
+let middle_Man_Name:string = 'Mubashir';
+// Middle Name
+let middle_Name:number = Math.floor(guest_List.length/2);
+// Adding middle name to an array
+guest_List.splice(middle_Name, 0, middle_Man_Name)
+console.log(`New guest Added at the middle: ${guest_List}`)
+
+// one new guest to the end of list 
+let newGuest_Name:string = 'Shakoor';
+guest_List.push(newGuest);
+console.log(`New guest Added at the end: ${guest_List}`)
+
+// Last New Invitation for each  
+for(let k=0; k<guest_List.length; k++){
+    console.log(`Hi my New Guys! ${guest_List[k]} I am inviting you for Dinner please join me at 8PM Thnkx!`);
+}
+
+
+
 
 

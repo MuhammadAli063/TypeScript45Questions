@@ -13,3 +13,25 @@ guest_List.push(newperson);
 for (var k = 0; k < guest_List.length; k++) {
     console.log("Dear ".concat(guest_List[k], " you are invited to dinner. Join me for a wonderful evening!"));
 }
+//  Question No:# 16  =>   More Guests
+//  Bigger Dinner Table 
+console.log("Hi Guys! I am infoeming you I found a Bigger Dinner table for you");
+// Add new guest beginning of array 
+var newGuest = 'Shahid';
+guest_List.unshift(newGuest);
+console.log("Add new guest beginning of array : " + guest_List);
+// Add one new guest to the middle of your array
+var middle_Man_Name = 'Mubashir';
+// Middle Name
+var middle_Name = Math.floor(guest_List.length / 2);
+// Adding middle name to an array
+guest_List.splice(middle_Name, 0, middle_Man_Name);
+console.log("New guest Added at the middle: ".concat(guest_List));
+// one new guest to the end of list 
+var newGuest_Name = 'Shakoor';
+guest_List.push(newGuest);
+console.log("New guest Added at the end: ".concat(guest_List));
+// Last New Invitation for each  
+for (var k = 0; k < guest_List.length; k++) {
+    console.log("Hi my New Guys! ".concat(guest_List[k], " I am inviting you for Dinner please join me at 8PM Thnkx!"));
+}
