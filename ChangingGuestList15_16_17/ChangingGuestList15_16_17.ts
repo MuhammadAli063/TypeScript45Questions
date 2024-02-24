@@ -1,5 +1,5 @@
 // Guest List 
-let guest_List: string[] = ['Ali', 'Umair', 'Hassan', 'Waqar'];
+ let guest_List: string[] = ['Ali', 'Umair', 'Hassan', 'Waqar'];
 
 // Guest I heared he is not comming
  let SomeoneInvited_MyGuest:string | undefined = guest_List.pop();
@@ -46,7 +46,22 @@ for(let k=0; k<guest_List.length; k++){
     console.log(`Hi my New Guys! ${guest_List[k]} I am inviting you for Dinner please join me at 8PM Thnkx!`);
 }
 
+// Q#17 Shrinking Guest List:
+console.log(`Hey Guys My new Table not Arrived yet.I am really sorry I want to invite only two Guests tonight for dinner`)
+// Remove guests from your list one at a time until only two names remai
+while(guest_List.length>2){
+    let guest_remove_names:string | undefined = guest_List.pop()
+    console.log(`${guest_remove_names} I sorry you can’t invite them to dinner`);
+}
+// Remaining two guests are still invited
+    for(let l=0; l<guest_List.length; l++){
+        console.log(`Hi ${guest_List[l]} you are still invited!`);
+    }
+// Remove last two more guests
+guest_List.pop();
+guest_List.pop();
 
+console.log(`End of Program's List : ${guest_List.length}`);
 
-
-
+export let final_guest: string[] = [...guest_List];
+console.log(final_guest)

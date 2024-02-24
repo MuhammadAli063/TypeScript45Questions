@@ -1,3 +1,15 @@
+"use strict";
+var __spreadArray = (this && this.__spreadArray) || function (to, from, pack) {
+    if (pack || arguments.length === 2) for (var i = 0, l = from.length, ar; i < l; i++) {
+        if (ar || !(i in from)) {
+            if (!ar) ar = Array.prototype.slice.call(from, 0, i);
+            ar[i] = from[i];
+        }
+    }
+    return to.concat(ar || Array.prototype.slice.call(from));
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.final_guest = void 0;
 // Guest List 
 var guest_List = ['Ali', 'Umair', 'Hassan', 'Waqar'];
 // Guest I heared he is not comming
@@ -35,3 +47,20 @@ console.log("New guest Added at the end: ".concat(guest_List));
 for (var k = 0; k < guest_List.length; k++) {
     console.log("Hi my New Guys! ".concat(guest_List[k], " I am inviting you for Dinner please join me at 8PM Thnkx!"));
 }
+// Q#17 Shrinking Guest List:
+console.log("Hey Guys My new Table not Arrived yet.I am really sorry I want to invite only two Guests tonight for dinner");
+// Remove guests from your list one at a time until only two names remai
+while (guest_List.length > 2) {
+    var guest_remove_names = guest_List.pop();
+    console.log("".concat(guest_remove_names, " I sorry you can\u2019t invite them to dinner"));
+}
+// Remaining two guests are still invited
+for (var l = 0; l < guest_List.length; l++) {
+    console.log("Hi ".concat(guest_List[l], " you are still invited!"));
+}
+// Remove last two more guests
+guest_List.pop();
+guest_List.pop();
+console.log("End of Program's List : ".concat(guest_List.length));
+exports.final_guest = __spreadArray([], guest_List, true);
+console.log(exports.final_guest);
