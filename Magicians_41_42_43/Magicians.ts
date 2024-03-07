@@ -8,9 +8,6 @@ function show_magicians(names: string[]) {
     }
 }
 
-// Printing names of magicians
-show_magicians(magician_names);
-
 // make_great function
 function make_great(names: string[]) {
     let great_magicians: string[] = [];
@@ -20,8 +17,19 @@ function make_great(names: string[]) {
     return great_magicians;
 }
 
-// Create a copy of the array and modify the copy
-let great_magicians_array = make_great([...magician_names]);
+// Show original magicians
+console.log("Original Magicians:");
+show_magicians(magician_names);
+
+//  Modify the array to make magicians great
+make_great(magician_names);
+
+// Show the modified magicians
+console.log("\nGreat Magicians:");
+show_magicians(magician_names);
+
+//  Call make_great() with a copy of the array
+let unchanged_magicians = make_great([...magician_names]);
 
 // Show the original magicians
 console.log("\nOriginal Magicians:");
@@ -29,4 +37,4 @@ show_magicians(magician_names);
 
 // Show the modified magicians
 console.log("\nGreat Magicians:");
-show_magicians(great_magicians_array);
+show_magicians(unchanged_magicians);
