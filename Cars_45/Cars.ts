@@ -10,6 +10,7 @@ function carInfo(manufacturer: string, modelName: string, options: { [key: strin
         car[key] = options[key];
     }
 
+    // returning
     return car;
 }
 
